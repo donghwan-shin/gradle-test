@@ -4,11 +4,11 @@ on:
   push:
 
 jobs:
-  gradle-test:
+  gradle-test-with-different-JDK:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jdk_version: ['14', '17']
+        jdk_version: ['11', '17']
 
     steps:
     - uses: actions/checkout@v3
